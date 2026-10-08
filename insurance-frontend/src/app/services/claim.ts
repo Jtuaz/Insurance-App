@@ -38,7 +38,6 @@ export class Claim {
             policyId: number;
             claimDate: string;
             amountClaimed: number;
-            status: string;
         }
     ): Observable<ClaimModel> {
 
@@ -53,7 +52,6 @@ export class Claim {
         claim: {
             claimDate: string;
             amountClaimed: number;
-            status: string;
         }
     ): Observable<void> {
 

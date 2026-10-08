@@ -77,7 +77,7 @@ public class ClaimsController : ControllerBase
         return Ok(claim);
     }
 
-   [HttpPost]
+    [HttpPost]
     public async Task<IActionResult> CreateClaim(
         CreateClaimRequest request)
     {
@@ -104,7 +104,7 @@ public class ClaimsController : ControllerBase
             PolicyId = request.PolicyId,
             ClaimDate = request.ClaimDate,
             AmountClaimed = request.AmountClaimed,
-            Status = request.Status ?? "Pending"
+            Status = "Pending"
         };
 
         _context.Claims.Add(claim);
@@ -152,9 +152,6 @@ public class ClaimsController : ControllerBase
 
         existingClaim.AmountClaimed =
             request.AmountClaimed;
-
-        existingClaim.Status =
-            request.Status;
 
         await _context.SaveChangesAsync();
 

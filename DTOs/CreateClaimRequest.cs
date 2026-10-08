@@ -7,6 +7,4 @@ public class CreateClaimRequest
     public DateOnly ClaimDate { get; set; }
 
     public decimal AmountClaimed { get; set; }
-
-    public string? Status { get; set; }
 }

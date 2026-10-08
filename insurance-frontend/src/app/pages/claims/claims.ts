@@ -37,8 +37,7 @@ export class Claims implements OnInit {
     newClaim = {
         policyId: 0,
         claimDate: '',
-        amountClaimed: 0,
-        status: 'Pending'
+        amountClaimed: 0
     };
 
     constructor(
@@ -233,10 +232,7 @@ export class Claims implements OnInit {
                 claim.claimDate,
 
             amountClaimed:
-                claim.amountClaimed,
-
-            status:
-                claim.status
+                claim.amountClaimed
         };
 
         this.showCreateForm = false;
@@ -291,10 +287,7 @@ export class Claims implements OnInit {
                 this.newClaim.claimDate,
 
             amountClaimed:
-                this.newClaim.amountClaimed,
-
-            status:
-                this.newClaim.status
+                this.newClaim.amountClaimed
         };
 
         this.claimService
@@ -395,9 +388,7 @@ export class Claims implements OnInit {
 
             claimDate: '',
 
-            amountClaimed: 0,
-
-            status: 'Pending'
+            amountClaimed: 0
         };
     }
 }

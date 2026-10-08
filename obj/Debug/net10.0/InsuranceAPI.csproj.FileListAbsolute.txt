@@ -176,3 +176,4 @@ D:\Revature\InsuranceAPI\bin\Debug\net10.0\insurance-frontend\tsconfig.json
 D:\Revature\InsuranceAPI\bin\Debug\net10.0\insurance-frontend\tsconfig.spec.json
 D:\Revature\InsuranceAPI\bin\Debug\net10.0\package-lock.json
 D:\Revature\InsuranceAPI\bin\Debug\net10.0\insurance-frontend\dist\insurance-frontend\prerendered-routes.json
+D:\Revature\InsuranceAPI\obj\Debug\net10.0\InsuranceAPI.sourcelink.json
