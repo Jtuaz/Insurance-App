@@ -1,0 +1,66 @@
+<div class="dashboard-container">
+
+    <h1>Insurance Dashboard</h1>
+
+    <h2>My Policies</h2>
+
+    <!-- Display error message if the API request fails -->
+    @if (errorMessage) {
+        <p class="error-message">
+            {{ errorMessage }}
+        </p>
+    } 
+    @else {
+        <p>
+            Number of policies: {{ policies.length }}
+        </p>
+
+        @if (policies.length > 0) {
+            @for (policy of policies; track policy.policyId) {
+                <div class="policy-card">
+
+                    <h3>
+                        {{ policy.policyType }} Insurance
+                    </h3>
+
+                    <p>
+                        <strong>Policy ID:</strong>
+                        {{ policy.policyId }}
+                    </p>
+
+                    <p>
+                        <strong>Customer ID:</strong>
+                        {{ policy.customerId }}
+                    </p>
+
+                    <p>
+                        <strong>Premium:</strong>
+                        ${{ policy.premiumAmount }}
+                    </p>
+
+                    <p>
+                        <strong>Start Date:</strong>
+                        {{ policy.startDate }}
+                    </p>
+
+                    <p>
+                        <strong>End Date:</strong>
+                        {{ policy.endDate }}
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong>
+                        {{ policy.status }}
+                    </p>
+
+                </div>
+            }
+        } 
+        @else {
+            <p>
+                You currently have no policies.
+            </p>
+        }
+    }
+
+</div>

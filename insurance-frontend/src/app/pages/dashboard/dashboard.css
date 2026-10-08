@@ -1,0 +1,35 @@
+.dashboard-container {
+    padding: 30px;
+}
+
+.dashboard-container h1 {
+    margin-bottom: 10px;
+}
+
+.dashboard-container h2 {
+    margin-bottom: 20px;
+}
+
+.policy-list {
+    display: grid;
+    gap: 20px;
+}
+
+.policy-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.policy-card h3 {
+    margin-top: 0;
+}
+
+.policy-card p {
+    margin: 8px 0;
+}
+
+.error-message {
+    padding: 15px;
+    border: 1px solid #dc3545;
+}
