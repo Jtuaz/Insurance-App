@@ -20,4 +20,5 @@ public partial class Customer
     public DateTime? CreatedAt { get; set; }
 
     public virtual ICollection<Policy> Policies { get; set; } = new List<Policy>();
+    public string Role { get; set; } = "Customer";
 }

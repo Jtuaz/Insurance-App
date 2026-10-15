@@ -14,12 +14,14 @@ public class TokenService
         _configuration = configuration;
     }
 
-    public string CreateToken(string username, int customerId)
+    public string CreateToken(string username, int customerId, string role)
+
     {
         var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, username),
-            new Claim(ClaimTypes.NameIdentifier, customerId.ToString())
+            new Claim(ClaimTypes.NameIdentifier, customerId.ToString()),
+            new Claim(ClaimTypes.Role, role)
         };
 
         var key = new SymmetricSecurityKey(

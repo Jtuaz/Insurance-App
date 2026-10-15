@@ -93,7 +93,8 @@ public class AuthController : ControllerBase
 
         var token = _tokenService.CreateToken(
             customer.Email,
-            customer.CustomerId);
+            customer.CustomerId,
+            customer.Role);
 
         return Ok(new
         {

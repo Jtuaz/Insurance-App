@@ -1,28 +1,38 @@
+
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { Auth } from '../../services/auth';
 
 @Component({
-    selector: 'app-navbar',
-    imports: [
-        RouterLink
-    ],
-    templateUrl: './navbar.html',
-    styleUrl: './navbar.css'
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
+  templateUrl: './navbar.html',
+  styleUrl: './navbar.css'
 })
 export class Navbar {
+  menuOpen = false;
 
-    constructor(
-        private auth: Auth,
-        private router: Router
-    ) {
-    }
+  constructor(
+    public auth: Auth,
+    private router: Router
+  ) {}
 
-    logout(): void {
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
 
-        this.auth.logout();
+  closeMenu(): void {
+    this.menuOpen = false;
+  }
 
-        this.router.navigate(['/login']);
-    }
+  logout(): void {
+    this.closeMenu();
+    this.auth.logout();
+    this.router.navigate(['/login']);
+  }
 }

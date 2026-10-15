@@ -1,0 +1,46 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--page-background, #F3F6FA);
+}
+
+app-navbar {
+  display: block;
+  flex: 0 0 250px;
+  width: 250px;
+  min-width: 0;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  app-navbar {
+    flex: none;
+    width: 100%;
+  }
+
+  .app-content {
+    padding: 74px 16px 20px;
+  }
+}
