@@ -10,7 +10,7 @@ import { ClaimModel } from '../models/claim';
 export class Claim {
 
     private apiUrl =
-        'http://localhost:5042/api/Claims';
+        'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Claims';
 
     constructor(
         private http: HttpClient

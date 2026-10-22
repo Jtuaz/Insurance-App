@@ -15,7 +15,7 @@ export interface LoginResponse {
   providedIn: 'root'
 })
 export class Auth {
-  private apiUrl = 'http://localhost:5042/api/Auth';
+  private apiUrl = 'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Auth';
 
   constructor(private http: HttpClient) {}
 

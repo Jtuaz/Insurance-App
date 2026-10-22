@@ -9,7 +9,7 @@ import { PaymentModel } from '../models/payment';
 })
 export class Payment {
 
-    private apiUrl = 'http://localhost:5042/api/Payments';
+    private apiUrl = 'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Payments';
 
     constructor(private http: HttpClient) {
     }

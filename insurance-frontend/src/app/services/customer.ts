@@ -9,7 +9,7 @@ import { CustomerModel } from '../models/customer';
 })
 export class Customer {
 
-    private apiUrl = 'http://localhost:5042/api/Customers';
+    private apiUrl = 'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Customers';
 
     constructor(private http: HttpClient) {
     }

@@ -3,9 +3,11 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Policy } from '../../services/policy';
 import { PolicyModel } from '../../models/policy';
 
+import { CurrencyPipe } from '@angular/common';
+
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })

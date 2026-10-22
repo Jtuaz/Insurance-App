@@ -10,7 +10,7 @@ import { PolicyModel } from '../models/policy';
 export class Policy {
 
     private apiUrl =
-        'http://localhost:5042/api/Policies';
+        'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Policies';
 
     constructor(
         private http: HttpClient

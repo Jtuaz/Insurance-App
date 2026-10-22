@@ -21,7 +21,7 @@ export interface AdminClaim {
   providedIn: 'root'
 })
 export class AdminClaimsService {
-  private readonly apiUrl = 'http://localhost:5042/api/Admin';
+  private readonly apiUrl = 'https://insurance-api-dea5f4chd9cxdqa4.westus2-01.azurewebsites.net/api/Admin';
 
   constructor(private http: HttpClient) {}
 
